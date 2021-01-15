@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { listPostDetails } from '../actions/postsActions';
-
+import {Link} from 'react-router-dom';
 import './PostDetailsScreen.css';
 import Title from '../components/Title';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Button from '../components/Button';
 
 
 const PostDetailsScreen = ({match}) => {
@@ -22,7 +23,7 @@ const PostDetailsScreen = ({match}) => {
     }, [dispatch, postId]);
 
     return (<>
-        
+        <Link  to='/'><Button className='btn-add'>Volver</Button></Link>
         {error && <MessageBox>{error}</MessageBox>}
         
         {post && !loading && !error && (

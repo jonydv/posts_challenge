@@ -39,8 +39,16 @@ const getPostById = asyncHandler(async (req, res, next) => {
 const createPost = asyncHandler(async (req, res, next) => {
 
     const { title, content, image, category } = req.body;
-    console.log(req.body);
-  
+    let validImage;
+    const validateImageUrl = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
+    
+    if(validateImageUrl.test(image)){
+        validImage = image;
+    }else{
+        res.status(400);
+        throw new Error('Invalid image url');
+    }
+    
     const createdPost = await Post.create({
         title, 
         content,
