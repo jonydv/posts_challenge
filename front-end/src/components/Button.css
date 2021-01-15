@@ -1,0 +1,44 @@
+button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #888686 solid;
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+
+/*button:hover{
+    border: 0.1rem #404040;
+  }*/
+
+  .btn-view{
+      background-color:  #1d185c;
+      color:#fff;
+  }
+
+  .btn-edit{
+    background-color:  #393486;
+    color:#fff;
+  }
+
+  .btn-delete{
+    background-color:  rgb(214, 12, 12);
+    color:#fff;
+  }
+
+  .btn-exit{
+    background-color:  rgb(214, 12, 12);
+    color:#fff;
+    padding: .2rem;
+    margin: .5rem;
+  }
+
+  .btn-add{
+    background-color:  black;
+    color:#fff;
+  }

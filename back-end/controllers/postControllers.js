@@ -6,7 +6,7 @@ import asyncHandler from 'express-async-handler';
 //@route Get /posts
 //@acces Public route
 const getPosts = asyncHandler(async (req, res, next) => {
-    const posts = await Post.findAll({});
+    const posts = await Post.findAll({order:[['date', 'DESC']]});
     if(!posts){
         res.status(404);
         throw new Error('Not posts found');

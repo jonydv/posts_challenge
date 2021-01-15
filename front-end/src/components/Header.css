@@ -1,0 +1,37 @@
+header{
+    grid-area: header;
+    background-color: black;
+    box-shadow: 0px 5px 5px #4c4a69;
+    color: #fff;
+    position:sticky;
+    top:0;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+}
+
+.active{
+    color: #afb0b4;
+    
+}
+
+.link-margin{
+    margin-right: 4rem;
+}
+
+header a{
+    color: #fff;
+    padding: 1rem;
+    font-size: 2.5rem;
+
+}
+
+@media (max-width: 500px){
+    .hide{
+        display:none;
+        
+    }
+    header i{
+        font-size: 3rem;
+    }
+}

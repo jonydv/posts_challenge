@@ -1,0 +1,45 @@
+.title{
+    font-size: 2rem;
+    color: white;
+}
+
+.card-body,
+.card-footer{
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 320px;
+}
+
+.card-body > *,
+.card-footer > * {
+    margin-bottom: 0.5rem;
+}
+
+
+.card-body a{
+    padding: 0;
+    margin: 0;
+}
+
+.card-body a h2{
+    padding: 0;
+    margin: 0;
+}
+
+.medium{
+    max-width: 40rem;
+    width: 100%;
+}
+
+.card a, .card a img{
+    padding: 0;
+    margin: 0;
+}
+
+.link{
+    width: 100%;
+}
+
+.small{
+    font-size: 2rem;
+}

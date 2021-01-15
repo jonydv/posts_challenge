@@ -14,7 +14,7 @@ const Post = sequelize.define('post', {
         primaryKey: true
     },
     title: Sequelize.STRING,
-    content: Sequelize.STRING,
+    content: Sequelize.TEXT('long'),
     image: Sequelize.STRING,
     category: Sequelize.STRING,
     date: Sequelize.DATEONLY,

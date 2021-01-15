@@ -1,0 +1,22 @@
+.card{
+    max-width: 320px;
+    border: 0.1rem #c0c0c0 solid;
+    /*background-color: black;*/
+    background-color: black;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    margin: 1rem;
+    margin-right: 1.5rem;
+}
+
+.card-footer{
+    display:flex;
+    flex-direction: column;
+}
+
+@media (max-width: 500px){
+    .card-footer{
+        display:flex;
+        flex-direction: column;
+    }
+}

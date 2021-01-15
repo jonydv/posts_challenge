@@ -1,0 +1,7 @@
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: #fff;
+    margin-top: 2rem;
+
+}

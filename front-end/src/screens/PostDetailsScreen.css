@@ -1,0 +1,45 @@
+
+.post-grid{
+    display:grid;
+    grid-template-areas: 
+    'title'
+    'image'
+    'post-body';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin: .5rem;
+    padding:1rem;
+    height: 100%;
+    max-width: 96rem;
+    
+}
+.left{
+    text-align: left;
+}
+.post-title{
+    grid-area: title;
+}
+
+.img-large{
+    grid-area: image;
+}
+
+
+
+.justify{
+    grid-area:post-body;
+    text-align: justify;
+}
+
+.small{
+    font-size: 1.5rem;
+}
+
+.category{
+    background-color: black;
+    color: #fff;
+    border-radius: 1rem;
+    text-align:center;
+    width: 150px;
+    padding: 0.3rem;
+}

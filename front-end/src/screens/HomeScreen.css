@@ -1,0 +1,20 @@
+.home i{
+    font-size: 1.5rem;
+}
+
+.btn-add{
+    position: sticky;
+    top: 9rem;
+}
+@media (max-width: 500px){
+    .home i{
+        font-size: 2rem;
+        margin:0;
+    }
+    .hide{
+        display: none;
+    }
+    .btn-add{
+        padding: .6rem;
+    }
+}

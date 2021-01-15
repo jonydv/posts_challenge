@@ -1,0 +1,62 @@
+.main-title{
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main-title.transparent{
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.75);
+    color: black;
+    padding: .5rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+.main-title h1{
+    font-size: 4rem;
+}
+
+.main-title.small h1{
+    font-size: 2rem;
+}
+
+.main-title.small.black h1{
+    font-size: 2rem;
+}
+
+.main-title.small.black {
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    box-shadow: 10px 10px 5px 0px rgba(121, 117, 117, 0.75);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-title.small{
+    padding: 0;
+    margin:0;
+    background-color:transparent;
+}
+
+@media(max-width: 500px){
+    .main-title h1{
+        font-size: 3rem;
+    }
+    .main-title.small{
+        padding: 0;
+        margin:0;
+        background-color:transparent;
+    }
+    .main-title.small h1{
+        font-size: 2rem;
+    }
+}
