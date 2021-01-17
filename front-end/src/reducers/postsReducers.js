@@ -16,7 +16,7 @@ import {
     POSTS_UPDATE_FAIL
 } from '../constants/postsConstants';
 
-const initialState = {posts: [], post: {}, loading: false, error: null};
+const initialState = {posts: [], loading: false, error: null};
 export const postsReducers = (state = initialState, action) => {
     switch (action.type){
         case POSTS_LIST_REQUEST:

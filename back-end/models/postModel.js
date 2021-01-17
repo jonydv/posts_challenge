@@ -16,7 +16,6 @@ const Post = sequelize.define('post', {
     title: Sequelize.STRING,
     content: Sequelize.TEXT('long'),
     image: Sequelize.STRING,
-    category: Sequelize.STRING,
     date: Sequelize.DATEONLY,
 
 },{

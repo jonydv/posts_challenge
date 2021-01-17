@@ -12,12 +12,6 @@ const sequelize = new Sequelize(
     host: 'localhost'
 });
 
-/*const sequelize = new Sequelize(
-    'alkemy_posts', 'root', 'jonydv3649', {
-    dialect: 'mysql', 
-    host: 'localhost'
-});*/
-
 
 //Exportamos la configuración para utilizarla en distintas ubicaciones
 export default sequelize;

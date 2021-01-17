@@ -1,12 +1,19 @@
-import sequelize from '../database/db.js';
 import Post from '../models/postModel.js';
+import Category from '../models/categoryModel.js'
 import asyncHandler from 'express-async-handler';
 
 //@ Desc fetch All posts
 //@route Get /posts
 //@acces Public route
 const getPosts = asyncHandler(async (req, res, next) => {
-    const posts = await Post.findAll({order:[['date', 'DESC']]});
+    const posts = await Post.findAll(
+        {include:{
+            model: Category,
+            attributes: ['name']
+            
+        },
+        order:[['date', 'DESC']]
+    });
     if(!posts){
         res.status(404);
         throw new Error('Not posts found');
@@ -19,9 +26,16 @@ const getPosts = asyncHandler(async (req, res, next) => {
 //@route Get /posts/:id
 //@acces Public route
 const getPostById = asyncHandler(async (req, res, next) => {
+    
     const postId = req.params.id;
   
-        const post = await Post.findByPk(postId)
+    const post = await Post.findByPk(
+        postId,{
+        include:{
+            model: Category,
+            attributes: ['name']
+        }}
+        )
         if(post === null){
             res.status(404);
             throw new Error ('Post not found')
@@ -38,7 +52,7 @@ const getPostById = asyncHandler(async (req, res, next) => {
 //@acces Public route
 const createPost = asyncHandler(async (req, res, next) => {
 
-    const { title, content, image, category } = req.body;
+    const { title, content, image, categoryId } = req.body;
     let validImage;
     const validateImageUrl = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
     
@@ -53,7 +67,7 @@ const createPost = asyncHandler(async (req, res, next) => {
         title, 
         content,
         image,
-        category,
+        categoryId,
         date: Date.now()
     });
 
@@ -79,7 +93,7 @@ const updatePost = asyncHandler(async (req, res, next) => {
         post.title = req.body.title || post.title;
         post.content = req.body.content || post.content;
         post.image = req.body.image || post.image;
-        post.category = req.body.category || post.category;
+        post.categoryId = req.body.categoryId || post.categoryId;
     }
 
     const updatePost = await Post.update(post.dataValues, {where: {id: postId}})

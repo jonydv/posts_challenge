@@ -5,9 +5,12 @@ import express from 'express';
 import cors from 'cors';
 import sequelize from './database/db.js';
 import postRoutes from './routes/postRoutes.js';
+import categoryRoutes from './routes/categoryRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
-import Post from './models/postModel.js';
+import './models/postModel.js';
+import './models/categoryModel.js';
+import './database/dbAssociations.js';
 
 
 
@@ -25,6 +28,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/posts', postRoutes);
+app.use('/categorys', categoryRoutes);
+
 
 app.use(notFound);
 

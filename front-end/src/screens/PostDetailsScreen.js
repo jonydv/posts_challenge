@@ -33,7 +33,7 @@ const PostDetailsScreen = ({match}) => {
             <div className="post-title">
                 <Title>{post.title}</Title>
 
-                <p className="left category">{post.category}</p>
+                <p className="left category">{post.category.name}</p>
             </div>
 
             <div className="img-large">
